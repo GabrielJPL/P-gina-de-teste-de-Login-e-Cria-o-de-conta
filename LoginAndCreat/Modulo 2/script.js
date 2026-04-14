@@ -4,19 +4,12 @@ function carregar() {
     const horas = data.getHours()
     if (horas >= 0 && horas <= 12){
         //Bom dia
-        document.body.style.background = `#F0E68C`
         msgD.innerHTML = `Bom dia`
     } else if (horas >= 12 && horas <= 18){
         // Boa tarde
-        document.body.style.background = `#3CB371`
-        msgD.style.color = "black"
-        copyright.style.color = "black"
         msgD.innerHTML = `Boa tarde`
     } else{
-        document.body.style.background = `#363636`
         //Boa noite
-        copyright.style.color = "white"
-        msgD.style.color = "white"
         msgD.innerHTML = `Boa noite`
     }
 }
@@ -26,12 +19,13 @@ function criar() {
     const senhaE = document.getElementById('confirmarsenha').value;
     const idadeInformada = document.getElementById('idade').value; // Pega o número digitado
     const aviso = document.getElementById('aviso');
+    const aviso1 = document.getElementById('aviso1');
 
     // 1. Verifica se a idade é menor que 18
-    if (idadeInformada < 18) {
+    if (idadeInformada < 10) {
         aviso.style.color = 'red';
-        aviso.innerHTML = "Acesso negado: você precisa ter 18 anos ou mais.";
-        return; // Para a função aqui
+        aviso.innerHTML = "Acesso negado: A idade não é reconhecida";
+        return;
     }
 
     // 2. Verifica se as senhas coincidem

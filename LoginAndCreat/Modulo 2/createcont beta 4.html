@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Criar Conta</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body onload="carregar()">
+
+    <header>
+
+        <h1 id="diatardenoite"></h1>
+
+    </header>
+
+    <section id="sec11">
+
+        <div> Olá usuário, bem vindo a seção de criação de conta, por favor insira os dados:</div>
+
+    </section>
+
+    <section id="sec12">
+
+        <p>Insira um nome de usuário:</p>
+
+        <input type="text" name="coletarnomedeusuario" placeholder="Nome de usuário" autocomplete="off">
+
+        <p>Insira sua idade:</p>
+
+        <input type="number" name="coletaridadedousuario" placeholder="Idade do usuário" id="idade">
+
+        <p>Insira uma senha para este usuário:</p>
+
+        <input type="password" name="senhadousuario" placeholder="Insira uma senha para este usuário" id="senhaparausuario">
+
+        <p>Confirme a senha logo abaixo</p>
+
+        <input type="password" name="confirmarsenha" placeholder="Confirme a senha" id="confirmarsenha">
+
+        <input type="button" value="Criar" onclick="criar()" id="criar"> 
+
+        <p id="aviso"></p>
+
+        <p id="aviso1"></p>
+
+        <div>
+
+            <p>Já tem uma conta? Faça login aqui: <a href="/Sistemas/LoginAndCreat/Modulo 1/Login beta 3.html" target="_blank">Logue na sua conta já existente</a></p>
+
+        </div>
+
+        <div>
+
+            <p>Veja também este projeto: <a href="/Sistemas/LoginAndCreat/Modulo 0/pagina inicial beta5.html" target="_blank">Veja mais</a></p>
+
+        </div>
+
+    </section>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

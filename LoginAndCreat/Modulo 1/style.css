@@ -1,18 +1,25 @@
 body{
+    margin-top: 100px;
     background: black;
+    color: black;
+    transition: .5s ease-in-out;
 }
-    header#titulo1{
+header#titulo1{
     font-style: 𝙼𝚘𝚗𝚘𝚜𝚙𝚊𝚌𝚎;
     top: 25px;
     color: rgb(121, 133, 243);
     text-align: center;
     font-size: 25px;
     position: relative;
-    z-index: 999;
 }
-section#sec1{
+#ready{
+    margin: 25px;
+    color:  rgb(248, 161, 0);
+    margin-left: 200px;
+}
+#sec1{
     top: 35px;
-    background: rgb(40, 0, 0);
+    background: rgb(0, 0, 0);
     border-radius: 10px;
     padding: 15px;
     width: 500px;
@@ -20,9 +27,9 @@ section#sec1{
     box-shadow: 3px 3px 5px rgb(248, 161, 0);
     border-color: rgb(248, 161, 0);
 }
-section#sec2{
+#sec2{
     top: 35px;
-    background: rgb(40, 0, 0);
+    background: rgb(0, 0, 0);
     border-radius: 10px;
     padding: 15px;
     width: 500px;
@@ -31,20 +38,41 @@ section#sec2{
     margin-top: 10px;
     border-color: rgb(248, 161, 0);
 }
+div{
+    color: rgb(248, 161, 0);
+}
+#aa{
+    color: violet;
+    margin-left: 25px;
+}
+#aaa{
+    color: violet;
+}
+h2{
+    margin-left: 15px;
+    color:  rgb(248, 161, 0);
+}
 p{
+    margin: 25px;
     color:  rgb(248, 161, 0);
     margin-left: 25px;
 }
-p#ready{
-    color: rgb(248, 161, 0);
-    margin-left: 30px;
+#modo1{
+    margin: 25px;
+    margin-left: 150px;
+    width: 40%;
+    color: white;
+    background-color: rgb(0, 0, 0);
+    border-color: rgb(248, 161, 0);
+    cursor: pointer;
+}
+#perguntarmodo{
+    text-align: center;
 }
 #nome{
     width: 90%;
     height: 22px;
     margin-left: 23px;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.349);
-    border-radius: 5px;
     color: rgb(255, 254, 254);
     background-color: black;
     border-color:  rgb(248, 161, 0);
@@ -53,8 +81,6 @@ p#ready{
     width: 90%;
     height: 22px;
     margin-left: 23px;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.349);
-    border-radius: 5px;
     color: rgb(255, 254, 254);
     background-color: black;
     border-color:  rgb(248, 161, 0);
@@ -63,15 +89,18 @@ p#ready{
     width: 90%;
     height: 22px;
     margin-left: 23px;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.349);
-    border-radius: 5px;
     color: rgb(255, 254, 254);
     background-color: black;
     border-color:  rgb(248, 161, 0);
 }
+#idade::-webkit-outer-spin-button,
+#idade::-webkit-outer-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
 #confirmar{
-    width: 30%;
-    margin-left: 165px;
+    width: 40%;
+    margin-left: 150px;
     color: white;
     background-color: rgb(0, 0, 0);
     border-color: rgb(248, 161, 0);
@@ -89,31 +118,60 @@ footer{
 }
 /*Top da página*/
 #topo-pagina {
-    width: 100%;
-    height: 40px;              
-    align-items: center;   
-    padding: 0 20px;       
-    position: fixed;       
+    /* Posicionamento Fixo */
+    position: fixed; /* Acompanha o headear no topo */
     top: 0;
     left: 0;
+    width: 100%;
+    height: 40px;
     z-index: 70;
-    box-sizing: border-box;
-    display: flex;            
-    justify-content: center;  
-    gap: 20px;                  
-    padding: 20px;
+    
+    /* Alinhamento dos Itens (Flexbox) */
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center;     /* Centraliza verticalmente */
+    gap: 20px;               /* Espaço entre as divs .infos */
+    
+    /* Estética */
     background-color: #333;
     color: white;
     font-family: sans-serif;
+    
+    /* Espaçamento Interno */
+    padding: 0 20px;         /* 0 em cima/baixo para não estourar os 40px de altura */
+    box-sizing: border-box;  /* Garante que o padding não aumente o tamanho total */
+}
+#painel-conteudo {
+    position: fixed;
+    top: 40px; /* Exatamente a altura do seu header */
+    left: 500px;
+    width: 50%; /*Largura inicial*/
+    background-color: #333;
+    z-index: 60;
+    overflow: hidden;
+    max-height: 0; /* Fechado */
+    transition:  0.5s ease-in-out; /* Faz o efeito de 'descer' */
+    box-shadow: 0px 4px 10px rgba(255, 254, 254, 0.1);
+}
+
+/* Quando o JS adiciona a classe 'aberto', ele expande */
+#painel-conteudo.aberto {
+    max-height: 250px; /* Altura que ele vai assumir ao abrir */
+    padding: 20px 0;
 }
 .infos {
     cursor: pointer;
-    transition: all 0.5s ease-in-out;
     position: relative;
+    
 }
+
+/* Efeito ao passar o mouse */
 .infos:hover {
-    color: #ffcc00;             
+    transition: 0.8s ease-in-out;
+    color: #ffcc00;      
 }
+
+/*Linha que surge embaixo */
 .infos::after {
     content: '';
     position: absolute;
@@ -124,27 +182,106 @@ footer{
     background-color: #ffcc00;
     transition: width 0.3s;
 }
+
 .infos:hover::after {
-    width: 100%;               
+    width: 100%;        /* A linha cresce ao passar o mouse */
 }
-p#per{
-    margin: 55px;
+
+.trilho{
+    margin-left: 25px; /* Parte de tras do interruptor, ou, percurso em que a "bola" irá percorrer*/
+    background-color: #696969; /*Cor da mesma*/
+    width: 50px;
+    height: 25px;
+    border-radius: 150px; /*A definição do formato*/
+    position: relative;
+    cursor: pointer; /*Estilo do cursor*/
+   
 }
-#painelinfos{
+.trilho .ponteiro{
+    width: 25px; /*Alavanca para ligar e desligar o modo light*/
+    height: 25px;
+    background-color: black;
+    border-radius: 100%;
+    transform: scale(0.9);
+    position: absolute; /*Dá a posição absoluta*/
+    left: 0; /*Faz o ponteiro começar sempre na esquerda*/
+    transition: .5s; /*A animação para ele se locomover*/
+}
+.trilho.dark{
+    background-color: #c3c3c3; /*Cor assim que ele assumir a outra cor*/
+}
+.trilho.dark .ponteiro{
+    left: 24px; /*Até onde ele vai (A animação é proporcional)*/
+    background-color: #ffff;
+}
+
+body.dark{
+    background-color: #e4e4e4e4;
+}
+body.dark #sec1{
+    border-color: black ;
+    background-color: #0000;
+    box-shadow: 3px 3px 5px black;
+}
+body.dark #sec2{
+    border-color: black ;
+    background-color: #0000;
+    color: black;
+    box-shadow: 3px 3px 5px black;
+}
+body.dark #nome{
+    border-color: black ;
+    background-color: #0000;
+    color: black;
+}
+body.dark #idade{
+    border-color: black ;
+    background-color: #0000;
+    color: black;
+}
+body.dark #password1{
+    border-color: black ;
+    background-color: #0000;
+    color: black;
+}
+body.dark #confirmar{
+    border-color: black ;
+    color: black;
+    background-color: #0000;
+}
+body.dark p{
+    color: black;
+    
+}
+body.dark #msg{
+    color: black;
+}
+body.dark #topo-pagina{
+    background: white;
     background-color: white;
-    width: 100%;
-    overflow: hidden;
-    transition: 0.5s ease-in-out;
-    max-height: 0;
-    box-shadow: 0px 4px 10px rgb(0,0,0,0.1);
-    text-align: center;
+    transition: 1s ease-in-out;
 }
-#painelinfos.aberto{
-    max-height: 300px;
-    padding: 20px 0;
+body.dark #painel-conteudo{
+    transition: 1s ease-in-out;
+    background-color: white;
 }
-#conteudo{
-    padding: 20px;
-    font-size: 1.2rem;
-    color: #333;
+body.dark .infos{
+    transition: 1s ease-in-out;
+    color: black;
+}
+body.dark .infos::after{
+    background-color: black;
+}
+body.dark h2{
+    color: black;
+}
+body.dark #msgD{
+    transition: 1s ease-in-out;
+    color: black;
+}    
+body.dark #ready{
+    color: black;
+}
+body.dark a{
+    color: rgb(17, 0, 110);
 }
