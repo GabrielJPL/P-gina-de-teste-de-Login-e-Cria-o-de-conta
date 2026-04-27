@@ -1,23 +1,23 @@
-body{
-    margin-top: 100px;
-    background: black;
-    color: black;
-    transition: .5s ease-in-out;
+body{ /* Corpo do HTML, ao ser chamado na CSS é possível definir e mudar o estilo dele (cor, animações entre outros). */
+    margin-top: 100px; /* Este comando definie a margen (espaço que o elemento tomará de acordo com qual direção for escrita: left (esquerda) right (direita) e top (topo), a posição baixo se dar quando o top tem valor negativo no px ou $) podendo ser definido com px ( pixels) ou % (porcentagens). */
+    background: black; /* Cor de fundo do elemento */
+    color: black; /* Cor que as letras dentro do elemento podem assumir, por padrão virá sempre preto, junto com a cor do background que será branco*/
+    transition: .5s ease-in-out; /* Parte de animação, dando uma transição sútil (ease-in-out, responsavel por dar uma animação mais suave).*/
 }
-header#titulo1{
-    font-style: 𝙼𝚘𝚗𝚘𝚜𝚙𝚊𝚌𝚎;
-    top: 25px;
-    color: rgb(121, 133, 243);
-    text-align: center;
-    font-size: 25px;
-    position: relative;
+header#titulo1{ /*Header é o "cabeçalho do projeot/documento"*/
+    font-style: 𝙼𝚘𝚗𝚘𝚜𝚙𝚊𝚌𝚎;  /* Comando em que permite o programador mudar o estilo da fonte (letras) do projeto/elemento todo. */
+    top: 25px; /* Espaço definido no topo */
+    color: rgb(121, 133, 243); /*Cor das letras*/
+    text-align: center; /* Alinha os textos do elemento/documento/projeto. */
+    font-size: 25px; /*Tamanho da fonte*/
+    position: relative; /* Comando que define a posicão de um elemento, tendo a absolute como a posição total/definitiva.*/
 }
-#ready{
+#ready{ /* Estilo do paragrafo responsavel por perguntar se o usuario ja terminou todas as pendencias.*/
     margin: 25px;
     color:  rgb(248, 161, 0);
     margin-left: 200px;
 }
-#sec1{
+#sec1{ /* Estilo da seção, descrita na parte HTML do documento*/
     top: 35px;
     background: rgb(0, 0, 0);
     border-radius: 10px;
@@ -27,7 +27,7 @@ header#titulo1{
     box-shadow: 3px 3px 5px rgb(248, 161, 0);
     border-color: rgb(248, 161, 0);
 }
-#sec2{
+#sec2{ /* Estilo da 2ª seção do documento */
     top: 35px;
     background: rgb(0, 0, 0);
     border-radius: 10px;
@@ -38,38 +38,26 @@ header#titulo1{
     margin-top: 10px;
     border-color: rgb(248, 161, 0);
 }
-div{
+div{ /* Estilos das divs, se forem codadas assim, todas as divs seguiram o mesmo padrão, não só dependendo das IDS (chaves de identificação). */
     color: rgb(248, 161, 0);
 }
 #aa{
     color: violet;
     margin-left: 25px;
 }
-#aaa{
+#aaa{ /* Estilos do links. */
     color: violet;
 }
-h2{
+h2{ /* Estilo do 2ª titulo. */
     margin-left: 15px;
     color:  rgb(248, 161, 0);
 }
-p{
+p{ /* Estilo de todos os paragrafos do documento. */
     margin: 25px;
     color:  rgb(248, 161, 0);
     margin-left: 25px;
 }
-#modo1{
-    margin: 25px;
-    margin-left: 150px;
-    width: 40%;
-    color: white;
-    background-color: rgb(0, 0, 0);
-    border-color: rgb(248, 161, 0);
-    cursor: pointer;
-}
-#perguntarmodo{
-    text-align: center;
-}
-#nome{
+#nome{ /* Estilo do input para o campo nome. */
     width: 90%;
     height: 22px;
     margin-left: 23px;
@@ -77,7 +65,7 @@ p{
     background-color: black;
     border-color:  rgb(248, 161, 0);
 }
-#password1{
+#password1{ /* Estilo do input para o campo senha.*/
     width: 90%;
     height: 22px;
     margin-left: 23px;
@@ -85,7 +73,7 @@ p{
     background-color: black;
     border-color:  rgb(248, 161, 0);
 }
-#idade{
+#idade{ /*Estilo do input para o campo idade*/
     width: 90%;
     height: 22px;
     margin-left: 23px;
@@ -93,12 +81,7 @@ p{
     background-color: black;
     border-color:  rgb(248, 161, 0);
 }
-#idade::-webkit-outer-spin-button,
-#idade::-webkit-outer-spin-button{
-    -webkit-appearance: none;
-    margin: 0;
-}
-#confirmar{
+#confirmar{ /* Estilo do botao responsavel por enviar os dados. */
     width: 40%;
     margin-left: 150px;
     color: white;
@@ -172,7 +155,7 @@ footer{
 }
 
 /*Linha que surge embaixo */
-.infos::after {
+.infos::after { /* Estilo das informações descritas na HTML, como a animação, coloração e a transição. */
     content: '';
     position: absolute;
     width: 0;
@@ -214,6 +197,8 @@ footer{
     left: 24px; /*Até onde ele vai (A animação é proporcional)*/
     background-color: #ffff;
 }
+
+/* A partir daqui, tudo abaixo faz parte do modo dark, então os comandos repetidos servem para mudar a cor dos elementos, somente isso.*/
 
 body.dark{
     background-color: #e4e4e4e4;
@@ -282,6 +267,7 @@ body.dark #msgD{
 body.dark #ready{
     color: black;
 }
-body.dark a{
+body.dark #aaa{
     color: rgb(17, 0, 110);
 }
+/* Fim da transição de modos*/

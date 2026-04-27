@@ -1,0 +1,14 @@
+body {
+    background: black;
+
+}
+#secao1{
+    background-color: rgb(255, 255, 255);
+    height: 500px;
+    width: 400px;
+    text-align: center;
+    border-radius: 15px;
+    margin-left: 40%;
+    margin-top: 10%;
+    z-index: 99;
+}

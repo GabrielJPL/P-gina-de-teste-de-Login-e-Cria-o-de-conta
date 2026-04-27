@@ -1,89 +1,94 @@
-<!DOCTYPE html>
+<!DOCTYPE html> <!--Inicio do projeto-->
 
-<html lang="pt-BT">
+<html lang="pt-BT"> <!--Linguagem nativa do documento/site.-->
 
-<head>
+<head> <!--Parte da cabeça de todo o documento, responsável por carregar a CSS e o titulo do documento.-->
 
-    <meta charset="UTF-8">
+    <meta charset="UTF-8"> <!--Define a codificação de caracteres da página-->
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Controla como o site é exibido em dispositivos móveis.-->
 
-    <title>Modúlo</title>
+    <title>Modúlo</title> <!--Titulo do documento-->
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css"> <!--arte style do documento "linkado" separado para uma organização mais fluída e limpa no documento-->
     
-</head>
+</head> <!--Fim da cabeça do documento.-->
 
-<body onload="carregar()">
+<body onload="carregar()"> <!--Esta parte carrega todo o esquema de horarios o tempo todo(toda vez que a página é carregada).--> 
 
-    <header id="topo-pagina">
+    <header id="topo-pagina"> <!--Topo da página onde as funções de configuração e informações adcionais estão armazenadas.-->
 
-        <div class="infos" data-secao="home">Home</div>
-        <div class="infos" data-secao="menu">Menu</div>
-        <div class="infos" data-secao="especialista">Especialista</div>
-        <div class="infos" data-secao="contatos">Contatos</div>
-        <div class="infos" data-secao="sobre">Sobre</div>
-        <div class="infos" data-secao="projetos">Projetos</div>
+        <!--São as funções do menu, funcionando quando o usuario passa o cursor em cima delese se fechando após um clique em qualquer um deles.-->
 
-    </header>
+        <div class="infos" data-secao="home"        >          Home             </div> <!--Breve explicação sobre o que é este projeto-->
+        <div class="infos" data-secao="menu"        >          Menu             </div> <!--Instruções para a criação de uma conta caso o usuário não tenha uma.-->
+        <div class="infos" data-secao="especialista">          Especialista     </div> <!--Sobre a equipe.-->
+        <div class="infos" data-secao="contatos"    >          Contatos         </div> <!--Numéro de conta de todos na equipe.-->
+        <div class="infos" data-secao="sobre"       >          Sobre            </div> <!--Mais detalhes sobre o projeto e o rumo que ele terá.-->
+        <div class="infos" data-secao="projetos"    >          Projetos         </div> <!--Outros projetos desenvolvidos ou em desenvolvimento.-->
 
-    <div id="painel-conteudo"> 
-        <div id="texto-dinamico"></div>
+        <!--São as funções do menu, funcionando quando o usuario passa o cursor em cima delese se fechando após um clique em qualquer um deles.-->
+
+    </header> <!--Fim do topo da pagina-->
+
+    <div id="painel-conteudo"> <!--Painel ivisível que aparece assim que o cursor do usuario passar nas funções acima.-->
+
+        <div id="texto-dinamico"></div> <!--Texto onde as informações são armazenadas ou alteradas (estando logo abaixo do seus elementos pais).-->
         
-    </div>
+    </div> <!--Fim do painel invisível-->
 
-    <header id="titulo1">
+    <header id="titulo1"> <!--Parte onde o titulo está localizado como elemento pai.-->
 
-        <h1 id="msgD"></h1>
+        <h1 id="msgD"></h1> <!--Titulo, onde é o elemento filho.-->
 
-    </header>
+    </header> <!--Fim do elemento pai.-->
 
-    <section id="sec1">
-        <div class="trilho" id="trilho"><div class="ponteiro"></div></div>
-        <div id="msg"></div>
+    <section id="sec1"> <!--Inicio da tranfereênica do modo dark para o modo light como elemento pai-->
+        <div class="trilho" id="trilho"><div class="ponteiro"></div></div> <!--Elementos filhos que fazem seu trabalho na CSS-->
+        <div id="msg"></div> <!--Mensagem que diz o horário.-->
 
-    </section>
+    </section> <!--Fim da tranferência elemento pai-->
 
-    <section id="sec2">
+    <section id="sec2"> <!--Seção onde a parte principal está localizada.-->
 
-        <p>Digite seu nome de usuário logo abaixo:</p>
+        <p>Digite seu nome de usuário logo abaixo:</p> <!--Paragrafo intuitivo para que o usuario coloque seu nome com mais facilidade.-->
 
-        <input type="text" id="nome" placeholder="Digite seu nome aqui" autocomplete="off">
+        <input type="text" id="nome" placeholder="Digite seu nome aqui" autocomplete="off"> <!--Campo onde o usuario colocará: nome.-->
 
-        <p> Digite sua idade logo abaixo:</p>
+        <p> Digite sua idade logo abaixo:</p> <!--Paragrafo intuitivo para que o usuario coloque sua idade com mais facilidade.-->
 
-        <input type="number" id="idade" placeholder="Digite sua idade aqui" >
+        <input type="number" id="idade" placeholder="Digite sua idade aqui" > <!--Campo onde o usuario colocará: idade.-->
 
-        <p>Digite sua senha logo abaixo:</p>
+        <p>Digite sua senha logo abaixo:</p> <!--Paragrafo intuitivo para que o usuario coloque sua senha com mais facilidade.-->
 
-        <input type="password" id="password1" placeholder="Digite sua senha aqui" autocomplete="off">
+        <input type="password" id="password1" placeholder="Digite sua senha aqui" autocomplete="off"> <!--Campo onde o usuario colocará: Senha.-->
 
-        <p id="ready">Tudo pronto?</p>
+        <p id="ready">Tudo pronto?</p> <!--Pergunta feita para ser intuitiva e para separar melhor os outros inputs.-->
 
-        <input type="button" value="Sim" onclick="enviardados()" id="confirmar">
+        <input type="button" value="Sim" onclick="enviardados()" id="confirmar"> <!--Botão cuja a função é direcionar o usuario para a parte principal do projeto caso todas as condições sejam atendidas.-->
 
-        <div>
+        <div> <!--Inicio da divisão de links para outros projetos e notas.-->
 
-            <p id="note"></p> 
+            <p id="note"></p> <!--Nota caso o login dê certo ou errado--> <!--Esta parte é exclusiva caso algum campo esteja errado além da senha.-->
 
-            <p id="note1"></p>
+            <p id="note1"></p> <!--Nota caso o login dê certo ou errado--><!--Esta parte é exclusiva caso o campo de senha esteja errada.-->
 
-            <p>Não tem uma conta? Crie uma aqui:  <a id="aaa" href="/Sistemas/LoginAndCreat/Modulo 2/createcont beta 4.html" target="_blank">Criar Conta</a></p>
+            <p>Não tem uma conta? Crie uma aqui:  <a id="aaa" href="/Projetos/Sistemas/LoginAndCreat/Modulo 2/createcont beta 4.html" target="_blank">Criar Conta</a></p> <!--Criação de conta em outra.-->
 
-            <p>Veja támbem este projeto:  <a id="aaa" href="/Scripts/Teste (alfas em js).js/Mercado.js" target="_blank">Breve</a></p>
+            <p>Veja támbem este projeto:  <a id="aaa" href="/Projetos/Game developer/Fight/braw and fight.html" target=_blank">Outro Projeto</a></p> <!--Redirecionamento para outro projeto.-->
 
-        </div>
+        </div> <!--Fim da divisão de links e notas.-->
 
-    </section>
+    </section> <!--Fim da seção com a parte principal.-->
 
-    <footer>
+    <footer> <!--Rodapé-->
 
-        <p id="copyright">&copy;https//não_me//copie://.com</p>
+        <p id="copyright">&copy;gabriel</p> <!--Sintaxe de experimento de anti-copy.-->
 
-    </footer>
+    </footer> <!--Fim do rodapé-->
 
-    <script src="script.js"></script>
+    <script src="script.js"></script> <!--Parte script do documento "linkado" separado para uma organização mais fluída e limpa no documento.-->
 
-</body>
+</body> <!--Fim do corpo.-->
 
-</html>
+</html> <!--Fim do projeto.-->

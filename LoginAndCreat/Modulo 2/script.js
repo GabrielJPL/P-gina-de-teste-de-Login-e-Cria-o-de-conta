@@ -37,7 +37,7 @@ function criar() {
         aviso.innerHTML = "Tudo certo, criando conta...";
 
         setTimeout(() => {
-            window.location.href = "/Estudando Html/Skulls/roleta.html";
+            window.location.href = "/Projetos/Sistemas/LoginAndCreat/Modulo 0/pagina inicial beta5.html";
         }, 1000);
     }
 }
